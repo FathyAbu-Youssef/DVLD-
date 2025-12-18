@@ -117,7 +117,7 @@ namespace DVLD_Business
         }
         public bool SetCompelete()
         {
-            return clsApplicationData.UpdateStatus(ApplicationID, (short)enStatus.Complete);
+            return clsApplicationData.UpdateStatus(this.ApplicationID, (short)enStatus.Complete);
         }
         public virtual bool Save()
         {

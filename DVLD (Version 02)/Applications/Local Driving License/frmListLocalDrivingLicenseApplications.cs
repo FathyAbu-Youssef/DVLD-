@@ -33,6 +33,7 @@ namespace DVLD__Version_02_.Applications.LocalDrivingLicense
 
         private void frmListLocalDrivingLicenseApplications_Load(object sender, EventArgs e)
         {
+            txtFilterByvalue.Text = "";
             _dtAllApplications = clsLocalDrivingLicenseApplication.GetAllLocalDrivingLicenseApplications();
             dgvLocalDrivingLicenseApplications.DataSource = _dtAllApplications;
             lbNumberOfApplications.Text = "# " + dgvLocalDrivingLicenseApplications.Rows.Count.ToString() + " Record";
@@ -174,7 +175,7 @@ namespace DVLD__Version_02_.Applications.LocalDrivingLicense
             {
                 _dtAllApplications.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilterByvalue.Text.Trim());
             }
-            lbNumberOfApplications.Text = "# " + dgvLocalDrivingLicenseApplications.Rows.Count.ToString() + " Record";
+            lbNumberOfApplications.Text = "# " + dgvLocalDrivingLicenseApplications.Rows.Count.ToString() + " Records";
         }
 
         private void ScheduleTestAppointment(clsTestType.enTestType TestType)
@@ -194,7 +195,6 @@ namespace DVLD__Version_02_.Applications.LocalDrivingLicense
         private void WrittenTest_Click(object sender, EventArgs e)
         {
             ScheduleTestAppointment(clsTestType.enTestType.WrittenTest);
-
         }
 
         private void StreetTest_Click(object sender, EventArgs e)
@@ -208,6 +208,7 @@ namespace DVLD__Version_02_.Applications.LocalDrivingLicense
             frmIssueLocalLicenseFirstTime frm = new frmIssueLocalLicenseFirstTime(LocalDrivingLicenseApplicationID);
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog();
+            frmListLocalDrivingLicenseApplications_Load(null, null);
         }
 
         private void ShowLicense_Click(object sender, EventArgs e)

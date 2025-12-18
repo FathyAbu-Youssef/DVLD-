@@ -22,6 +22,7 @@ namespace DVLD__Version_02_.People
 
         private void RefreshList()
         {
+            txtFilterByvalue.Text = "";
             _dtAllPeople = clsPerson.GetAllPeople();
             _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNO",
                "FirstName", "SecondName", "ThirdName", "LastName", "Gender", "Nationality",
@@ -40,11 +41,13 @@ namespace DVLD__Version_02_.People
             frmAddUpdate frmAddUpdate = new frmAddUpdate();
             frmAddUpdate.StartPosition = FormStartPosition.CenterParent;
             frmAddUpdate.ShowDialog();
+            RefreshList();
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPersonInfo frm = new frmPersonInfo(1);
+            int PersonID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+            frmPersonInfo frm = new frmPersonInfo(PersonID);
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog();
         }
@@ -84,16 +87,16 @@ namespace DVLD__Version_02_.People
                 dgvPeople.Columns[0].Width = 120;
 
                 dgvPeople.Columns[1].HeaderText = "National No";
-                dgvPeople.Columns[1].Width = 130;
+                dgvPeople.Columns[1].Width = 140;
 
                 dgvPeople.Columns[2].HeaderText = "First Name";
-                dgvPeople.Columns[2].Width = 120;
+                dgvPeople.Columns[2].Width = 150;
 
                 dgvPeople.Columns[3].HeaderText = "Second Name";
-                dgvPeople.Columns[3].Width = 145;
+                dgvPeople.Columns[3].Width = 155;
 
                 dgvPeople.Columns[4].HeaderText = "Third Name";
-                dgvPeople.Columns[4].Width = 130;
+                dgvPeople.Columns[4].Width = 150;
 
                 dgvPeople.Columns[5].HeaderText = "Last Name";
                 dgvPeople.Columns[5].Width = 130;

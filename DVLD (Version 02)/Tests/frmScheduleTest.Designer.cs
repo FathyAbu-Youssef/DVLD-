@@ -40,6 +40,7 @@
             this.ctrlScheduleTest2.Size = new System.Drawing.Size(662, 791);
             this.ctrlScheduleTest2.TabIndex = 1;
             this.ctrlScheduleTest2.TestTypeID = DVLD_Business.clsTestType.enTestType.VisionTest;
+            this.ctrlScheduleTest2.Load += new System.EventHandler(this.ctrlScheduleTest2_Load);
             // 
             // ctrlScheduleTest1
             // 

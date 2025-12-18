@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlScheduledTest));
             this.GBTestTitle = new System.Windows.Forms.GroupBox();
+            this.PBHeaderImage = new System.Windows.Forms.PictureBox();
             this.lbAppointmentDate = new System.Windows.Forms.Label();
             this.lbTestID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,8 +53,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label = new System.Windows.Forms.Label();
             this.lbheader = new System.Windows.Forms.Label();
-            this.PBHeaderImage = new System.Windows.Forms.PictureBox();
             this.GBTestTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBHeaderImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -61,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBHeaderImage)).BeginInit();
             this.SuspendLayout();
             // 
             // GBTestTitle
@@ -97,6 +97,17 @@
             this.GBTestTitle.TabIndex = 1;
             this.GBTestTitle.TabStop = false;
             this.GBTestTitle.Text = "Vision Test";
+            // 
+            // PBHeaderImage
+            // 
+            this.PBHeaderImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PBHeaderImage.Image = global::DVLD__Version_02_.Properties.Resources.eye;
+            this.PBHeaderImage.Location = new System.Drawing.Point(267, 19);
+            this.PBHeaderImage.Name = "PBHeaderImage";
+            this.PBHeaderImage.Size = new System.Drawing.Size(158, 80);
+            this.PBHeaderImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBHeaderImage.TabIndex = 157;
+            this.PBHeaderImage.TabStop = false;
             // 
             // lbAppointmentDate
             // 
@@ -322,20 +333,9 @@
             this.lbheader.ForeColor = System.Drawing.Color.Beige;
             this.lbheader.Location = new System.Drawing.Point(229, 95);
             this.lbheader.Name = "lbheader";
-            this.lbheader.Size = new System.Drawing.Size(233, 36);
+            this.lbheader.Size = new System.Drawing.Size(252, 36);
             this.lbheader.TabIndex = 158;
-            this.lbheader.Text = "Schedule Test ";
-            // 
-            // PBHeaderImage
-            // 
-            this.PBHeaderImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PBHeaderImage.Image = global::DVLD__Version_02_.Properties.Resources.eye;
-            this.PBHeaderImage.Location = new System.Drawing.Point(267, 19);
-            this.PBHeaderImage.Name = "PBHeaderImage";
-            this.PBHeaderImage.Size = new System.Drawing.Size(158, 80);
-            this.PBHeaderImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBHeaderImage.TabIndex = 157;
-            this.PBHeaderImage.TabStop = false;
+            this.lbheader.Text = "Scheduled Test ";
             // 
             // ctrlScheduledTest
             // 
@@ -348,6 +348,7 @@
             this.Size = new System.Drawing.Size(642, 525);
             this.GBTestTitle.ResumeLayout(false);
             this.GBTestTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBHeaderImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -355,7 +356,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBHeaderImage)).EndInit();
             this.ResumeLayout(false);
 
         }

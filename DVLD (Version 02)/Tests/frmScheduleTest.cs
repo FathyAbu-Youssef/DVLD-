@@ -30,5 +30,10 @@ namespace DVLD__Version_02_
             ctrlScheduleTest2.TestTypeID = this._TestTypeID;
             ctrlScheduleTest2.LoadData(_LocalDrivingLicenseApplicationID, _TestTypeID, AppointmentID);
         }
+
+        private void ctrlScheduleTest2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

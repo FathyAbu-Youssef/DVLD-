@@ -95,9 +95,10 @@ namespace DVLD__Version_02_.People
 
         private void _ReSetDefaultValues()
         {
-            _FillCountriesInComboBox();
             txtFirstName.Focus();
 
+            _FillCountriesInComboBox();
+  
             if (_Mode == enMode.Update)
             {
                 lbHeader.Text = "Update Pesron";

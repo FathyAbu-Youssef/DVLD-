@@ -76,7 +76,7 @@ namespace DVLD__Version_02_.Applications.Detain_License
                     return;
                 }
 
-                MessageBox.Show("License Detained Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("License Detained Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 btndetain.Enabled = false;
                 ctrlDriverLicenseInfoWithFilter1.FilterEnabled = false;

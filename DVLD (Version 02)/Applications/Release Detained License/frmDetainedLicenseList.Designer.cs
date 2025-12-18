@@ -49,7 +49,7 @@
             this.lbCountOfRecords = new System.Windows.Forms.Label();
             this.txtFilterByvalue = new System.Windows.Forms.TextBox();
             this.cbIsReleased = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRelease = new System.Windows.Forms.Button();
             this.btnAddNewDetainedLicense = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetainedLicenses)).BeginInit();
@@ -88,7 +88,7 @@
             this.dgvDetainedLicenses.ReadOnly = true;
             this.dgvDetainedLicenses.RowHeadersWidth = 62;
             this.dgvDetainedLicenses.RowTemplate.Height = 29;
-            this.dgvDetainedLicenses.Size = new System.Drawing.Size(1409, 210);
+            this.dgvDetainedLicenses.Size = new System.Drawing.Size(1409, 161);
             this.dgvDetainedLicenses.TabIndex = 17;
             // 
             // cmOptions
@@ -106,7 +106,7 @@
             this.ReleaseLicenseToolStripMenuItem,
             this.toolStripSeparator6});
             this.cmOptions.Name = "contextMenuStrip1";
-            this.cmOptions.Size = new System.Drawing.Size(306, 195);
+            this.cmOptions.Size = new System.Drawing.Size(306, 162);
             this.cmOptions.Opening += new System.ComponentModel.CancelEventHandler(this.cmOptions_Opening);
             // 
             // showPersonDetailsToolStripMenuItem
@@ -214,11 +214,12 @@
             this.lbCountOfRecords.AutoSize = true;
             this.lbCountOfRecords.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lbCountOfRecords.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(229)))));
-            this.lbCountOfRecords.Location = new System.Drawing.Point(10, 467);
+            this.lbCountOfRecords.Location = new System.Drawing.Point(13, 420);
             this.lbCountOfRecords.Name = "lbCountOfRecords";
             this.lbCountOfRecords.Size = new System.Drawing.Size(99, 28);
             this.lbCountOfRecords.TabIndex = 18;
             this.lbCountOfRecords.Text = "#Records";
+            this.lbCountOfRecords.Click += new System.EventHandler(this.lbCountOfRecords_Click);
             // 
             // txtFilterByvalue
             // 
@@ -248,18 +249,18 @@
             this.cbIsReleased.Visible = false;
             this.cbIsReleased.SelectedIndexChanged += new System.EventHandler(this.cbIsReleased_SelectedIndexChanged);
             // 
-            // button1
+            // btnRelease
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.BackgroundImage = global::DVLD__Version_02_.Properties.Resources.unlock;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(1250, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 64);
-            this.button1.TabIndex = 26;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRelease.BackColor = System.Drawing.Color.Red;
+            this.btnRelease.BackgroundImage = global::DVLD__Version_02_.Properties.Resources.unlock;
+            this.btnRelease.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRelease.Location = new System.Drawing.Point(1250, 183);
+            this.btnRelease.Name = "btnRelease";
+            this.btnRelease.Size = new System.Drawing.Size(75, 64);
+            this.btnRelease.TabIndex = 26;
+            this.btnRelease.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRelease.UseVisualStyleBackColor = false;
+            this.btnRelease.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAddNewDetainedLicense
             // 
@@ -290,8 +291,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(1427, 504);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1427, 472);
+            this.Controls.Add(this.btnRelease);
             this.Controls.Add(this.cbIsReleased);
             this.Controls.Add(this.btnAddNewDetainedLicense);
             this.Controls.Add(this.dgvDetainedLicenses);
@@ -334,6 +335,6 @@
         private System.Windows.Forms.Label lbCountOfRecords;
         private System.Windows.Forms.TextBox txtFilterByvalue;
         private System.Windows.Forms.ComboBox cbIsReleased;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRelease;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DVLD__Version_02_.Applications.LocalDrivingLicense;
+using DVLD__Version_02_.Licenses;
 using DVLD__Version_02_.Licenses.InternationalLicense;
 using DVLD__Version_02_.People;
 using DVLD_Business;
@@ -84,6 +85,11 @@ namespace DVLD__Version_02_.Applications.International_License
                     FilterColumn = "DriverID";
                     break;
 
+                case "Local License ID":
+                    FilterColumn = "IssuedUsingLocalLicenseID";
+                    break;
+
+
                 default:
                     FilterColumn = "InternationalLicenseID";
                     break;
@@ -140,6 +146,21 @@ namespace DVLD__Version_02_.Applications.International_License
             frm.ShowDialog();
         }
 
+        private void btnAddNewApplication_Click(object sender, EventArgs e)
+        {
+            frmAddNewInternationalLicense  frm = new frmAddNewInternationalLicense();
+            frm.StartPosition= FormStartPosition.CenterParent;
+            frm.ShowDialog();
 
+            frmListInternationalLicenseApplications_Load(null, null);
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonID = clsDriver.FindByDriverID((int)dgvInternationalLicenseApplications.CurrentRow.Cells[2].Value).PersonID;
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(PersonID);
+            frm.StartPosition= FormStartPosition.CenterParent;
+            frm.ShowDialog();
+        }
     }
 }

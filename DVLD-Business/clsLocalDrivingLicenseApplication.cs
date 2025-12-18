@@ -19,7 +19,6 @@ namespace DVLD_Business
         public int LocalDrivingLicenseApplicationID { set; get; }
         public byte LicenseClassID { set; get; }
         public string PersonFullFullName { get { return ApplicantPersonInfo.FullName; } }
-        //You can return a copy of the object instead of original one to keep its internal state , returing the original will expose it's reference outside the class
         public clsLicenseClass LicenseClassInfo { set; get; }
 
         public clsLocalDrivingLicenseApplication():base() 
@@ -209,6 +208,5 @@ namespace DVLD_Business
         }
 
 
-      
     }
 }

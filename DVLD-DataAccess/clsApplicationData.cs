@@ -297,7 +297,7 @@ namespace DVLD_DataAccess
             {
                 Connection.Open();
                 object Result = Command.ExecuteScalar();
-                if (int.TryParse(Result.ToString(), out int ID)) 
+                if (Result!=null && int.TryParse(Result.ToString(), out int ID)) 
                 {
                     ActiveApplicationID = ID;
                 }

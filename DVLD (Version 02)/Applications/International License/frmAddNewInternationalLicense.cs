@@ -81,7 +81,7 @@ namespace DVLD__Version_02_.Applications.International_License
             InternationalLicense.ApplicationDate= DateTime.Now;
             InternationalLicense.LastStatusDate = DateTime.Now;
             InternationalLicense.PaidFees = Convert.ToSingle(lbApplicationFees.Tag);
-           // InternationalLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;
+            InternationalLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;
 
             //Seconed We Fill International License Information
 

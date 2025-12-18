@@ -172,6 +172,7 @@
             this.Controls.Add(this.rbPass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ctrlScheduledTest1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmTakeTest";
             this.Text = "Scheduled Test";
             this.Load += new System.EventHandler(this.frmScheduledTest_Load);

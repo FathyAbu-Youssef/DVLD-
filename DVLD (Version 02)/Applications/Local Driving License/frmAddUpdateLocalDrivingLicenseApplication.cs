@@ -141,6 +141,7 @@ namespace DVLD__Version_02_.Applications.LocalDrivingLicense
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _Mode = enMode.Update;
                 lbHeader.Text = this.Text = "Update Local Driving License Application";
+                lbApplicationID.Text= _LocalDriverLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             }
             else 
             {

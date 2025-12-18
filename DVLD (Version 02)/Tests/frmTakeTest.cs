@@ -49,6 +49,7 @@ namespace DVLD__Version_02_.Tests
                 rbFail.Enabled = false;
 
                 lblUserMessage.Visible = true;
+                btnSave.Enabled = false;
             }
             else
             {
@@ -68,7 +69,7 @@ namespace DVLD__Version_02_.Tests
             _Test.TestAppointmentID=_TestAppointmentID;
             _Test.Notes = txtNotes.Text.Trim();
             _Test.CreatedByUserID = clsGlobal.CurrentUser.UserID;
-
+            _Test.Notes= txtNotes.Text.Trim();
             if (_Test.Save())
             {
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);

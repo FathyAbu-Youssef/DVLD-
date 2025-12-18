@@ -160,6 +160,7 @@ namespace DVLD__Version_02_.Tests
                     return false;
                 }
                 _TestAppointment.RetakeTestApplicationID = Application.ApplicationID;
+                lbRetakeApplicationID.Text = Application.ApplicationID.ToString();
             }
             return true;
         }
@@ -247,7 +248,7 @@ namespace DVLD__Version_02_.Tests
             _TestAppointment.LocalDrivingLicenseApplicationID = _LocalDrivingLicenseApplicationID;
             _TestAppointment.TestTypeID = _TestTypeID;
             _TestAppointment.CreatedByUserID=clsGlobal.CurrentUser.UserID;
-            _TestAppointment.AppointmentDate = DateTime.Now;
+            _TestAppointment.AppointmentDate = dtpDate.Value.Date;
             _TestAppointment.PaidFees = Convert.ToSingle(lbFees.Tag);
 
             if (_TestAppointment.Save())

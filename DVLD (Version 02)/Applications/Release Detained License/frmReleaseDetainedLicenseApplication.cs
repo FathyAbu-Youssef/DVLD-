@@ -80,7 +80,7 @@ namespace DVLD__Version_02_.Applications.Release_Detained_License
             btnRelease.Enabled = false;
             ctrlDriverLicenseInfoWithFilter2.FilterEnabled = false;
             lbApplicationID.Text = ReleaseApplicationID.ToString();
-            MessageBox.Show("License Released Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("License Released Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

@@ -29,6 +29,9 @@ namespace DVLD__Version_02_.Applications.Release_Detained_License
             frmDetainApplication frm = new frmDetainApplication();
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog();
+            //Refresh
+            frmDetainedLicenseList_Load(null, null);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,6 +39,8 @@ namespace DVLD__Version_02_.Applications.Release_Detained_License
             frmReleaseDetainedLicenseApplication frm = new frmReleaseDetainedLicenseApplication();
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog();
+            //Refresh
+            frmDetainedLicenseList_Load(null, null);
         }
 
         private void cmbfilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -199,6 +204,11 @@ namespace DVLD__Version_02_.Applications.Release_Detained_License
             frm.ShowDialog();
             //Refresh
             frmDetainedLicenseList_Load(null, null);
+        }
+
+        private void lbCountOfRecords_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
